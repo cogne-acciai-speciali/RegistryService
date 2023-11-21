@@ -1,0 +1,582 @@
+2023-11-10 09:25:32.241 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/WorkCenters
+2023-11-10 09:25:32.282 +01:00 [INF] Sending HTTP request GET https://localhost:7150/WorkCenters
+2023-11-10 09:25:43.214 +01:00 [ERR] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7150)
+2023-11-10 09:40:23.532 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/WorkCenters
+2023-11-10 09:40:23.544 +01:00 [INF] Sending HTTP request GET https://localhost:7150/WorkCenters
+2023-11-10 09:40:27.977 +01:00 [ERR] WorkCenterService.GetSapWorkCentersAsync: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7150)
+2023-11-10 09:53:27.521 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/WorkCenters
+2023-11-10 09:53:27.537 +01:00 [INF] Sending HTTP request GET https://localhost:7150/WorkCenters
+2023-11-10 09:53:29.579 +01:00 [INF] Received HTTP response headers after 2039.2454ms - 200
+2023-11-10 09:53:29.581 +01:00 [INF] End processing HTTP request after 2074.91ms - 200
+2023-11-10 09:53:35.974 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:53:35.974 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:53:52.577 +01:00 [ERR] WorkCenterService.ManageWorkCenters ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertApcWorkCenter(An_Centro_Di_Lavoro anCentroDiLavoro) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 95
+   at RegistryService.WorkCenterService.UpsertApcWorkCenter(WorkCenters workCenter) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\WorkCenterService.cs:line 68
+   at RegistryService.WorkCenterService.ManageWorkCenters() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\WorkCenterService.cs:line 53
+2023-11-10 09:53:57.974 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:53:57.974 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:54:42.893 +01:00 [ERR] WorkCenterService.ManageWorkCenters ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertApcWorkCenter(An_Centro_Di_Lavoro anCentroDiLavoro) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 95
+   at RegistryService.WorkCenterService.UpsertApcWorkCenter(WorkCenters workCenter) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\WorkCenterService.cs:line 68
+   at RegistryService.WorkCenterService.ManageWorkCenters() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\WorkCenterService.cs:line 53
+2023-11-10 09:54:42.896 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:54:42.896 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:54:47.250 +01:00 [ERR] WorkCenterService.ManageWorkCenters ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertApcWorkCenter(An_Centro_Di_Lavoro anCentroDiLavoro) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 95
+   at RegistryService.WorkCenterService.UpsertApcWorkCenter(WorkCenters workCenter) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\WorkCenterService.cs:line 68
+   at RegistryService.WorkCenterService.ManageWorkCenters() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\WorkCenterService.cs:line 53
+2023-11-10 09:54:47.250 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:54:47.250 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:54:51.580 +01:00 [ERR] WorkCenterService.ManageWorkCenters ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertApcWorkCenter(An_Centro_Di_Lavoro anCentroDiLavoro) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 95
+   at RegistryService.WorkCenterService.UpsertApcWorkCenter(WorkCenters workCenter) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\WorkCenterService.cs:line 68
+   at RegistryService.WorkCenterService.ManageWorkCenters() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\WorkCenterService.cs:line 53
+2023-11-10 09:54:51.581 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 09:54:51.581 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 17:14:55.547 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/WorkCenters
+2023-11-10 17:14:55.575 +01:00 [INF] Sending HTTP request GET https://localhost:7150/WorkCenters
+2023-11-10 17:14:57.293 +01:00 [INF] Received HTTP response headers after 1715.3726ms - 200
+2023-11-10 17:14:57.295 +01:00 [INF] End processing HTTP request after 1768.8637ms - 200
+2023-11-10 17:15:03.255 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-10 17:15:03.255 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcWorkCenter
+2023-11-13 14:54:27.391 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-13 14:54:27.406 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-13 14:54:27.938 +01:00 [INF] Received HTTP response headers after 529.175ms - 200
+2023-11-13 14:54:27.940 +01:00 [INF] End processing HTTP request after 561.7693ms - 200
+2023-11-13 15:17:53.067 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-13 15:17:53.081 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-13 15:17:53.584 +01:00 [INF] Received HTTP response headers after 501.0758ms - 200
+2023-11-13 15:17:53.588 +01:00 [INF] End processing HTTP request after 531.7332ms - 200
+2023-11-14 16:21:10.410 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-14 16:21:10.426 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-14 16:21:11.215 +01:00 [INF] Received HTTP response headers after 786.7222ms - 200
+2023-11-14 16:21:11.218 +01:00 [INF] End processing HTTP request after 818.9241ms - 200
+2023-11-14 16:21:11.399 +01:00 [DBG] INIZIO operazioni : 
+2023-11-14 16:22:35.425 +01:00 [INF] Start processing HTTP request POST https://localhost:7127/ApcRegistry/InsertApcCaratLotClasses
+2023-11-14 16:22:35.425 +01:00 [INF] Sending HTTP request POST https://localhost:7127/ApcRegistry/InsertApcCaratLotClasses
+2023-11-14 16:22:39.930 +01:00 [ERR] ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.InsertApcCaratLotClasses(List`1 anCaratClassePartite) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 62
+   at RegistryService.RegistryServices.InsertCaratLotClasses(SapLotClass sapLotClass) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 230
+   at RegistryService.RegistryServices.ManageLotClasses() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 190
+2023-11-14 16:22:39.930 +01:00 [DBG] INIZIO operazioni : 
+2023-11-14 16:22:44.567 +01:00 [INF] Start processing HTTP request POST https://localhost:7127/ApcRegistry/InsertApcCaratLotClasses
+2023-11-14 16:22:44.568 +01:00 [INF] Sending HTTP request POST https://localhost:7127/ApcRegistry/InsertApcCaratLotClasses
+2023-11-14 16:22:55.517 +01:00 [ERR] ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.InsertApcCaratLotClasses(List`1 anCaratClassePartite) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 62
+   at RegistryService.RegistryServices.InsertCaratLotClasses(SapLotClass sapLotClass) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 230
+   at RegistryService.RegistryServices.ManageLotClasses() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 190
+2023-11-17 14:29:03.345 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-17 14:29:03.369 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-17 14:29:05.181 +01:00 [INF] Received HTTP response headers after 1809.8742ms - 200
+2023-11-17 14:29:05.183 +01:00 [INF] End processing HTTP request after 1846.1978ms - 200
+2023-11-17 14:57:21.469 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-17 14:57:21.482 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-17 14:57:24.170 +01:00 [INF] Received HTTP response headers after 2685.6114ms - 200
+2023-11-17 14:57:24.172 +01:00 [INF] End processing HTTP request after 2708.5851ms - 200
+2023-11-17 15:02:16.716 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:16.716 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:21.227 +01:00 [ERR] ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 79
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 58
+2023-11-17 15:02:21.228 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:21.228 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:25.608 +01:00 [ERR] ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 79
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 58
+2023-11-17 15:02:25.608 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:25.608 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:30.056 +01:00 [ERR] ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 79
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 58
+2023-11-17 15:02:30.056 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:30.056 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:34.468 +01:00 [ERR] ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 79
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 58
+2023-11-17 15:02:34.468 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:34.469 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:02:38.964 +01:00 [ERR] ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 79
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 58
+2023-11-17 15:02:38.964 +01:00 [DBG] FINE OPERAZIONI
+2023-11-17 15:12:19.312 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-17 15:12:19.323 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-17 15:12:21.141 +01:00 [INF] Received HTTP response headers after 1815.2752ms - 200
+2023-11-17 15:12:21.142 +01:00 [INF] End processing HTTP request after 1839.7071ms - 200
+2023-11-17 15:12:26.449 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:12:26.449 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:12:34.750 +01:00 [ERR] ERROR: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 79
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 58
+2023-11-17 15:12:41.184 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-17 15:12:41.185 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:34:40.230 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-20 11:34:40.272 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-20 11:34:44.653 +01:00 [INF] Received HTTP response headers after 4368.1885ms - 200
+2023-11-20 11:34:44.659 +01:00 [INF] End processing HTTP request after 4496.787ms - 200
+2023-11-20 11:34:45.468 +01:00 [DBG] INIZIO OPERAZIONI CARATTERISTICHE
+2023-11-20 11:47:21.511 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:47:21.512 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:47:22.690 +01:00 [INF] Received HTTP response headers after 1178.7272ms - 200
+2023-11-20 11:47:22.691 +01:00 [INF] End processing HTTP request after 1179.2741ms - 200
+2023-11-20 11:47:33.256 +01:00 [INF] Start processing HTTP request DELETE https://localhost:7127/ApcRegistry/DeleteCharacteristicVal/PERCENT_CROMO
+2023-11-20 11:47:33.257 +01:00 [INF] Sending HTTP request DELETE https://localhost:7127/ApcRegistry/DeleteCharacteristicVal/PERCENT_CROMO
+2023-11-20 11:47:33.532 +01:00 [INF] Received HTTP response headers after 275.2518ms - 200
+2023-11-20 11:47:33.532 +01:00 [INF] End processing HTTP request after 275.8215ms - 200
+2023-11-20 11:47:34.262 +01:00 [INF] Start processing HTTP request POST https://localhost:7127/ApcRegistry/InsertApcCaratValues
+2023-11-20 11:47:34.262 +01:00 [INF] Sending HTTP request POST https://localhost:7127/ApcRegistry/InsertApcCaratValues
+2023-11-20 11:47:35.111 +01:00 [INF] Received HTTP response headers after 849.2293ms - 500
+2023-11-20 11:47:35.111 +01:00 [INF] End processing HTTP request after 849.5481ms - 500
+2023-11-20 11:47:35.112 +01:00 [ERR] RegistryService.InsertCaratValues: ERRORE impossibile inserire PERCENT_CROMO 
+ ERROR: Internal Server Error
+2023-11-20 11:50:24.895 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:50:24.895 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:50:24.967 +01:00 [INF] Received HTTP response headers after 71.6073ms - 400
+2023-11-20 11:50:24.967 +01:00 [INF] End processing HTTP request after 76.1568ms - 400
+2023-11-20 11:50:27.271 +01:00 [ERR] RegistryService.UpsertCharacteristic: ERRORE impossibile aggiornare C000400 
+ ERROR: Bad Request
+2023-11-20 11:51:29.432 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:51:29.433 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:51:29.501 +01:00 [INF] Received HTTP response headers after 67.8046ms - 400
+2023-11-20 11:51:29.501 +01:00 [INF] End processing HTTP request after 68.4435ms - 400
+2023-11-20 11:53:02.030 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:53:02.031 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:53:02.094 +01:00 [INF] Received HTTP response headers after 62.4901ms - 400
+2023-11-20 11:53:02.094 +01:00 [INF] End processing HTTP request after 64.044ms - 400
+2023-11-20 11:57:17.379 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-20 11:57:17.392 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-20 11:57:19.694 +01:00 [INF] Received HTTP response headers after 2299.8998ms - 200
+2023-11-20 11:57:19.695 +01:00 [INF] End processing HTTP request after 2327.0448ms - 200
+2023-11-20 11:57:21.495 +01:00 [DBG] INIZIO OPERAZIONI CARATTERISTICHE
+2023-11-20 11:58:05.570 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:58:05.571 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:58:32.396 +01:00 [ERR] RegistryService.UpsertCharacteristic: System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: Connessione in corso interrotta forzatamente dall'host remoto..
+ ---> System.Net.Sockets.SocketException (10054): Connessione in corso interrotta forzatamente dall'host remoto.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 78
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 59
+2023-11-20 11:58:35.945 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:58:35.945 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:58:48.677 +01:00 [ERR] RegistryService.UpsertCharacteristic: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 78
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 59
+2023-11-20 11:58:58.930 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:58:58.930 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:59:03.331 +01:00 [ERR] RegistryService.UpsertCharacteristic: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 78
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 59
+2023-11-20 11:59:05.160 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:59:05.161 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 11:59:15.262 +01:00 [ERR] RegistryService.UpsertCharacteristic: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 78
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 59
+2023-11-20 12:13:06.720 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-20 12:13:06.739 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-20 12:13:09.022 +01:00 [INF] Received HTTP response headers after 2281.1967ms - 200
+2023-11-20 12:13:09.024 +01:00 [INF] End processing HTTP request after 2320.7468ms - 200
+2023-11-20 12:13:09.230 +01:00 [DBG] INIZIO OPERAZIONI CARATTERISTICHE
+2023-11-20 12:13:10.545 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 12:13:10.545 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 12:13:14.925 +01:00 [ERR] RegistryService.UpsertCharacteristic: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertCarat(An_Carat anCarat) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 30
+   at RegistryService.RegistryServices.UpsertCharacteristic(SapCharacteristic sapCharacteristic) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 78
+   at RegistryService.RegistryServices.ManageCharacteristics() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 59
+2023-11-20 12:13:22.651 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 12:13:22.651 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 12:13:52.257 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-20 12:13:52.272 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapCharacteristic
+2023-11-20 12:13:54.123 +01:00 [INF] Received HTTP response headers after 1848.8292ms - 200
+2023-11-20 12:13:54.125 +01:00 [INF] End processing HTTP request after 1879.8867ms - 200
+2023-11-20 12:13:54.320 +01:00 [DBG] INIZIO OPERAZIONI CARATTERISTICHE
+2023-11-20 12:13:58.042 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 12:13:58.042 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertCharacteristic
+2023-11-20 12:14:03.999 +01:00 [INF] Received HTTP response headers after 5957.024ms - 200
+2023-11-20 12:14:03.999 +01:00 [INF] End processing HTTP request after 5957.4367ms - 200
+2023-11-20 12:14:59.409 +01:00 [INF] Start processing HTTP request DELETE https://localhost:7127/ApcRegistry/DeleteCharacteristicVal/
+2023-11-20 12:14:59.411 +01:00 [INF] Sending HTTP request DELETE https://localhost:7127/ApcRegistry/DeleteCharacteristicVal/
+2023-11-20 12:14:59.468 +01:00 [INF] Received HTTP response headers after 57.3935ms - 404
+2023-11-20 12:14:59.468 +01:00 [INF] End processing HTTP request after 59.1877ms - 404
+2023-11-20 12:15:09.253 +01:00 [ERR] RegistryService.DeleteCaratValues: ERRORE impossibile eliminare  
+ ERROR: Not Found
+2023-11-20 16:01:42.008 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:01:42.037 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:01:46.783 +01:00 [ERR] RegistryService.GetSapLotClassesAsync: ERROR Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7150)
+2023-11-20 16:02:08.364 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:02:08.378 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:02:12.845 +01:00 [ERR] RegistryService.GetSapLotClassesAsync: ERROR Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7150)
+2023-11-20 16:05:11.405 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:05:11.418 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:05:13.011 +01:00 [INF] Received HTTP response headers after 1590.1235ms - 200
+2023-11-20 16:05:13.015 +01:00 [INF] End processing HTTP request after 1619.638ms - 200
+2023-11-20 16:06:01.262 +01:00 [DBG] INIZIO OPERAZIONI CLASSI - PARTITE
+2023-11-20 16:08:54.661 +01:00 [ERR] RegistryService.ConvertApcLotClass ERROR: Object reference not set to an instance of an object.
+2023-11-20 16:14:59.703 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:14:59.718 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:15:00.664 +01:00 [INF] Received HTTP response headers after 943.3737ms - 200
+2023-11-20 16:15:00.666 +01:00 [INF] End processing HTTP request after 977.591ms - 200
+2023-11-20 16:15:00.892 +01:00 [DBG] INIZIO OPERAZIONI CLASSI - PARTITE
+2023-11-20 16:16:53.891 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:16:53.904 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:16:54.314 +01:00 [INF] Received HTTP response headers after 407.2721ms - 200
+2023-11-20 16:16:54.316 +01:00 [INF] End processing HTTP request after 438.1383ms - 200
+2023-11-20 16:16:54.492 +01:00 [DBG] INIZIO OPERAZIONI CLASSI - PARTITE
+2023-11-20 16:18:28.842 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:18:28.856 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:18:29.268 +01:00 [INF] Received HTTP response headers after 409.968ms - 200
+2023-11-20 16:18:29.271 +01:00 [INF] End processing HTTP request after 439.5315ms - 200
+2023-11-20 16:18:29.451 +01:00 [DBG] INIZIO OPERAZIONI CLASSI - PARTITE
+2023-11-20 16:18:31.966 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcLotClass
+2023-11-20 16:18:31.966 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcLotClass
+2023-11-20 16:18:36.494 +01:00 [ERR] RegistryService.ManageLotClasses: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertApcLotClass(An_Classe_Partita anClassePartita) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 69
+   at RegistryService.RegistryServices.UpsertLotClass(SapLotClass sapLotClass) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 213
+   at RegistryService.RegistryServices.ManageLotClasses() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 196
+2023-11-20 16:19:09.500 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcLotClass
+2023-11-20 16:19:09.500 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcLotClass
+2023-11-20 16:19:13.971 +01:00 [ERR] RegistryService.ManageLotClasses: System.Net.Http.HttpRequestException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione. (localhost:7127)
+ ---> System.Net.Sockets.SocketException (10061): Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at MesLibrary.HttpConnector.MesWebApi.RegistryServiceConnector.UpsertApcLotClass(An_Classe_Partita anClassePartita) in C:\Users\adellamico\source\repos\MesLibrary\MesLibrary\HttpConnector\MesWebApi\RegistryServiceConnector.cs:line 69
+   at RegistryService.RegistryServices.UpsertLotClass(SapLotClass sapLotClass) in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 213
+   at RegistryService.RegistryServices.ManageLotClasses() in C:\Users\adellamico\source\repos\RegistryService\RegistryService\RegistryServices.cs:line 196
+2023-11-20 16:19:13.971 +01:00 [DBG] FINE OPERAZIONI CLASSI - PARTITE
+2023-11-20 16:25:19.624 +01:00 [INF] Start processing HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:25:19.641 +01:00 [INF] Sending HTTP request GET https://localhost:7150/SapLotClass
+2023-11-20 16:25:20.178 +01:00 [INF] Received HTTP response headers after 534.6086ms - 200
+2023-11-20 16:25:20.181 +01:00 [INF] End processing HTTP request after 572.1617ms - 200
+2023-11-20 16:25:21.806 +01:00 [DBG] INIZIO OPERAZIONI CLASSI - PARTITE
+2023-11-20 16:26:30.743 +01:00 [INF] Start processing HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcLotClass
+2023-11-20 16:26:30.743 +01:00 [INF] Sending HTTP request PUT https://localhost:7127/ApcRegistry/UpsertApcLotClass
+2023-11-20 16:26:31.860 +01:00 [INF] Received HTTP response headers after 1117.1374ms - 200
+2023-11-20 16:26:31.861 +01:00 [INF] End processing HTTP request after 1117.9287ms - 200
